@@ -240,3 +240,48 @@ section {
     height: 180px;
   }
 }
+/* ===== MENÚ MÓVIL FUNCIONAL ===== */
+
+@media (max-width: 768px) {
+
+  .menu-btn {
+    display: block;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    background:
+      linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+      url("fondo.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    transform: translateY(-100%);
+    transition: transform 0.35s ease;
+  }
+
+  .nav a {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  /* cuando está activo */
+  .nav.active {
+    transform: translateY(0);
+  }
+}
